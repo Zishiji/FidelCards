@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FidelCards</string>
+    <string name="menu">Menu</string>
+    <string name="favoris">Favoris</string>
+    <string name="ajouter">ajouter</string>
+    <string name="supprimer">supprimer</string>
+    <string name="connexion">Connexion</string>
+    <string name="parametre">Paramètres</string>
+    <string name="recherche"></string>
 </resources>
