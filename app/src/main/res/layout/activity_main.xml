@@ -26,365 +26,144 @@
             android:layout_alignParentStart="true" />
     </RelativeLayout>
 
+
+
     <!-- Les cartes de fidelitees -->
     <ScrollView
         android:id="@+id/sv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@id/rl"
         android:layout_marginBottom="50dp">
 
-        <LinearLayout
-            android:id="@+id/ListView_layout"
+        <RelativeLayout
+            android:id="@+id/listeCarte"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1" >
-            <RelativeLayout
-                android:id="@+id/rl_ListView1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5" >
+            android:layout_height="match_parent">
+
+            <!--<RelativeLayout
+                android:id="@+id/objcarte1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
                 <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton"
-                    android:background="@color/colorPrimary"
+                    android:layout_width="360px"
+                    android:layout_height="300px"
+                    android:id="@+id/carte1"
+                    android:background="@color/colorAccent"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
+                    android:layout_margin="10px" />
 
-                <TextView
-                    android:layout_width="40pt"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque1"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView"
-                    android:layout_below="@+id/imageButton"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button"
-                    android:layout_below="@+id/imageButton"
-                    android:layout_toEndOf="@+id/textView"
-                    android:layout_alignEnd="@+id/imageButton" />
-
-                <ImageButton
+                <LinearLayout
+                    android:id="@+id/option1"
                     android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton11"
-                    android:background="@color/colorPrimary"
-                    android:layout_below="@+id/button"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
-
-                <TextView
-                    android:layout_width="40pt"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque3"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView11"
-                    android:layout_below="@+id/imageButton11"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button11" />
+                    android:layout_alignLeft="@+id/carte1"
+                    android:layout_alignRight="@+id/carte1"
+                    android:layout_alignBottom="@+id/carte1">
 
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button11"
-                    android:layout_below="@+id/imageButton11"
-                    android:layout_toEndOf="@+id/textView"
-                    android:layout_alignEnd="@+id/imageButton11" />
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="90px"
+                        android:textSize="35px"
+                        android:text="Nom marque1"
+                        android:gravity="center"
+                        android:id="@+id/nomCarte1"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="75" />
 
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton12"
-                    android:background="@color/colorPrimary"
-                    android:layout_below="@+id/button11"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
-
-                <TextView
-                    android:layout_width="40pt"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque5"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView12"
-                    android:layout_below="@+id/imageButton12"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button12" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button12"
-                    android:layout_below="@+id/imageButton12"
-                    android:layout_toEndOf="@+id/textView12"
-                    android:layout_alignEnd="@+id/imageButton12" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton13"
-                    android:background="@color/colorPrimary"
-                    android:layout_below="@+id/button12"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
-
-                <TextView
-                    android:layout_width="40pt"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque7"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView13"
-                    android:layout_below="@+id/imageButton13"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button13" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button13"
-                    android:layout_below="@+id/imageButton13"
-                    android:layout_toEndOf="@+id/textView13"
-                    android:layout_alignEnd="@+id/imageButton13" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton14"
-                    android:background="@color/colorPrimary"
-                    android:layout_below="@+id/button13"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
-
-                <TextView
-                    android:layout_width="40pt"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque9"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView14"
-                    android:layout_below="@+id/imageButton14"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button14" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button14"
-                    android:layout_below="@+id/imageButton14"
-                    android:layout_toEndOf="@+id/textView14"
-                    android:layout_alignEnd="@+id/imageButton14" />
+                    <ImageButton
+                        android:id="@+id/buttonRenommer1"
+                        android:layout_width="50px"
+                        android:layout_height="90px"
+                        android:layout_weight="25"
+                        android:background="@color/colorPrimary"
+                        android:src="@android:drawable/ic_menu_edit" />
+                </LinearLayout>
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rl_ListView2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5" >
+                android:id="@+id/objcarte2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentstart="true"
+                android:layout_below="@+id/objcarte1">
+
                 <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton2"
+                    android:layout_width="360px"
+                    android:layout_height="300px"
+                    android:id="@+id/carte2"
                     android:background="@color/colorPrimary"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
                     android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
+                    android:layout_margin="10px" />
 
-                <TextView
-                    android:layout_width="40pt"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque2"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView2"
-                    android:layout_below="@+id/imageButton2"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button2" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button2"
-                    android:layout_below="@+id/imageButton2"
-                    android:layout_toEndOf="@+id/textView2"
-                    android:layout_alignEnd="@+id/imageButton2" />
-
-                <ImageButton
+                <LinearLayout
+                    android:id="@+id/option2"
                     android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton21"
-                    android:background="@color/colorPrimary"
-                    android:layout_below="@+id/button2"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
-
-                <TextView
-                    android:layout_width="40pt"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque4"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView21"
-                    android:layout_below="@+id/imageButton21"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button21" />
+                    android:layout_alignLeft="@+id/carte2"
+                    android:layout_alignRight="@+id/carte2"
+                    android:layout_alignBottom="@+id/carte2">
 
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button21"
-                    android:layout_below="@+id/imageButton21"
-                    android:layout_toEndOf="@+id/textView21"
-                    android:layout_alignEnd="@+id/imageButton21" />
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="90px"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Nom marque2"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:id="@+id/nomCarte2"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="75"
+                        android:layout_alignStart="@+id/option2" />
 
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton22"
-                    android:background="@color/colorPrimary"
-                    android:layout_below="@+id/button21"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
-
-                <TextView
-                    android:layout_width="40pt"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque6"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView22"
-                    android:layout_below="@+id/imageButton22"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button22" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button22"
-                    android:layout_below="@+id/imageButton22"
-                    android:layout_toEndOf="@+id/textView22"
-                    android:layout_alignEnd="@+id/imageButton22" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="50pt"
-                    android:id="@+id/imageButton23"
-                    android:background="@color/colorPrimary"
-                    android:layout_below="@+id/button22"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:src="@mipmap/logo"
-                    android:layout_margin="2pt" />
-
-                <TextView
-                    android:layout_width="40pt"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Nom marque8"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:id="@+id/textView23"
-                    android:layout_below="@+id/imageButton23"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignBottom="@+id/button23" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Renommer"
-                    android:textSize="5pt"
-                    android:id="@+id/button23"
-                    android:layout_below="@+id/imageButton23"
-                    android:layout_toEndOf="@+id/textView23"
-                    android:layout_alignEnd="@+id/imageButton23" />
+                    <ImageButton
+                        android:id="@+id/buttonRenommer2"
+                        android:layout_width="50px"
+                        android:layout_height="90px"
+                        android:layout_weight="25"
+                        android:background="@color/colorPrimary"
+                        android:src="@android:drawable/ic_menu_edit" />
+                </LinearLayout>
             </RelativeLayout>
-        </LinearLayout>
+            -->
+
+        </RelativeLayout>
     </ScrollView>
 
     <!-- FOOTER -->
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary" >
 
         <Button
             android:layout_width="150dp"
             android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/ajouter"
             android:text="@string/ajouter"
+            android:layout_weight="50"
+            android:layout_gravity="center"
             android:background="@android:color/holo_green_light"/>
 
         <Button
             android:layout_width="150dp"
             android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="195dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             android:id="@+id/supprimer"
             android:text="@string/supprimer"
+            android:layout_weight="50"
+            android:layout_gravity="center"
             android:background="@android:color/holo_red_light"/>
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>
