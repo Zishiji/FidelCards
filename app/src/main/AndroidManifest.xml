@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.l3info.fidelcards">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera"></uses-feature>
+
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
@@ -13,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:uiOptions="splitActionBarWhenNarrow" >
-        <activity android:name=".MainActivity" >
+        <activity android:name=".actvities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +26,8 @@
                 android:name="android.support.UI_OPTIONS"
                 android:value="splitActionBarWhenNarrow" />
         </activity>
+        <activity android:name=".actvities.AjoutActivity" />
+        <activity android:name=".actvities.SuppressionActivity" />
     </application>
 
 </manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nom de la carte : "
+        android:id="@+id/nomCarte"
+        android:layout_marginLeft="20px"
+        android:layout_alignBottom="@+id/nom" />
+
+    <EditText
+        android:layout_width="50pt"
+        android:layout_height="wrap_content"
+        android:id="@+id/nom"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/nomCarte" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Numéro carte : "
+        android:id="@+id/numCarte"
+        android:layout_alignBottom="@+id/num"
+        android:layout_alignStart="@+id/nomCarte" />
+
+    <EditText
+        android:layout_width="50pt"
+        android:layout_height="wrap_content"
+        android:id="@+id/num"
+        android:inputType="number"
+        android:layout_below="@+id/nomCarte"
+        android:layout_toEndOf="@+id/numCarte" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        android:id="@+id/valider"
+        android:onClick="valider"
+        android:layout_below="@+id/numCarte"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+</RelativeLayout>
