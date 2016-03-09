@@ -6,7 +6,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listViewCard"
+<<<<<<< HEAD
         android:layout_below="@+id/carteSupp"
+=======
+        android:layout_below="@+id/nomCarte"
+>>>>>>> origin/master
         android:layout_marginLeft="20px"
         android:layout_above="@+id/supprimer" />
 
@@ -16,7 +20,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Choisissez le nom de la carte à supprimer : "
         android:textAlignment="center"
+<<<<<<< HEAD
         android:id="@+id/carteSupp"
+=======
+        android:id="@+id/nomCarte"
+>>>>>>> origin/master
         android:layout_marginTop="40px" />
 
     <Button

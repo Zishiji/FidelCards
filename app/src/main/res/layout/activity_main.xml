@@ -26,14 +26,21 @@
             android:layout_alignParentStart="true" />
     </RelativeLayout>
 
+
+
     <!-- Les cartes de fidelitees -->
     <ScrollView
+<<<<<<< HEAD
+=======
+        android:id="@+id/sv"
+>>>>>>> origin/master
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/rl"
         android:layout_marginBottom="50dp"
         android:fillViewport="true">
 
+<<<<<<< HEAD
         <android.support.v7.widget.RecyclerView
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/recyclerView"
@@ -41,6 +48,105 @@
             android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
+=======
+        <RelativeLayout
+            android:id="@+id/listeCarte"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<RelativeLayout
+                android:id="@+id/objcarte1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <ImageButton
+                    android:layout_width="360px"
+                    android:layout_height="300px"
+                    android:id="@+id/carte1"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="10px" />
+
+                <LinearLayout
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/carte1"
+                    android:layout_alignRight="@+id/carte1"
+                    android:layout_alignBottom="@+id/carte1">
+
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="90px"
+                        android:textSize="35px"
+                        android:text="Nom marque1"
+                        android:gravity="center"
+                        android:id="@+id/nomCarte1"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="75" />
+
+                    <ImageButton
+                        android:id="@+id/buttonRenommer1"
+                        android:layout_width="50px"
+                        android:layout_height="90px"
+                        android:layout_weight="25"
+                        android:background="@color/colorPrimary"
+                        android:src="@android:drawable/ic_menu_edit" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/objcarte2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentstart="true"
+                android:layout_below="@+id/objcarte1">
+
+                <ImageButton
+                    android:layout_width="360px"
+                    android:layout_height="300px"
+                    android:id="@+id/carte2"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@mipmap/logo"
+                    android:layout_margin="10px" />
+
+                <LinearLayout
+                    android:id="@+id/option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/carte2"
+                    android:layout_alignRight="@+id/carte2"
+                    android:layout_alignBottom="@+id/carte2">
+
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="90px"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Nom marque2"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:id="@+id/nomCarte2"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="75"
+                        android:layout_alignStart="@+id/option2" />
+
+                    <ImageButton
+                        android:id="@+id/buttonRenommer2"
+                        android:layout_width="50px"
+                        android:layout_height="90px"
+                        android:layout_weight="25"
+                        android:background="@color/colorPrimary"
+                        android:src="@android:drawable/ic_menu_edit" />
+                </LinearLayout>
+            </RelativeLayout>
+            -->
+
+        </RelativeLayout>
+>>>>>>> origin/master
     </ScrollView>
     <!-- FOOTER -->
     <LinearLayout
@@ -73,4 +179,8 @@
             android:background="@android:color/holo_red_light"/>
     </LinearLayout>
 
+<<<<<<< HEAD
 </RelativeLayout>
+=======
+</RelativeLayout>
+>>>>>>> origin/master

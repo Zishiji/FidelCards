@@ -3,7 +3,10 @@
     package="com.l3info.fidelcards">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<<<<<<< HEAD
     <uses-feature android:name="android.hardware.camera"></uses-feature>
+=======
+>>>>>>> origin/master
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -26,8 +29,13 @@
                 android:name="android.support.UI_OPTIONS"
                 android:value="splitActionBarWhenNarrow" />
         </activity>
+<<<<<<< HEAD
         <activity android:name=".actvities.AjoutActivity" />
         <activity android:name=".actvities.SuppressionActivity" />
+=======
+        <activity android:name=".AjoutActivity" />
+        <activity android:name=".SuppressionActivity" />
+>>>>>>> origin/master
     </application>
 
 </manifest>
