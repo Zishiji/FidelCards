@@ -62,9 +62,15 @@ public class SuppressionActivity extends Activity {
         final CardDB dbCard = new CardDB(cardDBOpener);
 
         String carte = card.toString();
-        String[] nom = carte.split(" ");
+        String nom = "";
+        int i = 0;
+        while (!Character.isDigit(carte.charAt(i))) {
+            nom += carte.charAt(i);
+            i++;
+        }
+        nom = nom.substring(0, nom.length()-1);
 
-        dbCard.suppression_carte(nom[0]);
+        dbCard.suppression_carte(nom);
     }
 
     public void affichage_carte() {
@@ -75,12 +81,6 @@ public class SuppressionActivity extends Activity {
         ArrayList<String> descCartes = new ArrayList<String>();
         Cursor c = dbCard.lecture_base();
         String nom, num, shop;
-
-        /*if (c.moveToFirst()) {
-            nom = c.getString(c.getColumnIndex(Carte_Fidelite_FeedEntry.COLUMN_CARD_NAME));
-            num = String.valueOf(c.getInt(c.getColumnIndex(Carte_Fidelite_FeedEntry.COLUMN_CARD_NUM)));
-            descCartes.add(nom + " " + num);
-        }*/
 
         while (c.moveToNext()) {
             nom = c.getString(c.getColumnIndex(FeedEntry.COLUMN_CARD_NAME));

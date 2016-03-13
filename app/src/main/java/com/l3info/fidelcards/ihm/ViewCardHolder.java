@@ -54,8 +54,8 @@ class ViewCardHolder extends RecyclerView.ViewHolder implements View.OnClickList
         tv.setText(enseigne);
         File imgFile = new  File(carte.getImageUrl());
         if(imgFile.exists()) {
-            //Bitmap myBitmap = android.graphics.BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-            ib_card.setImageDrawable(Drawable.createFromPath(carte.getImageUrl()));
+            Bitmap myBitmap = android.graphics.BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+            ib_card.setImageBitmap(myBitmap);
         }
         ib_card.setOnClickListener(this);
         rl.addView(ll, paramsOptn);

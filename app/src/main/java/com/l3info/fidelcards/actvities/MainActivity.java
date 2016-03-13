@@ -1,8 +1,10 @@
 package com.l3info.fidelcards.actvities;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -42,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         int orientation = 2;
         Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         switch(display.getOrientation()) {
-            /*case Surface.ROTATION_0:
-            case Surface.ROTATION_180:
-                orientation = 2;
-                break;*/
             case Surface.ROTATION_90:
             case Surface.ROTATION_270:
                 orientation = 4;
@@ -85,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         int taille = dbCard.taille_base();
         final String [] carte = new String[taille];
 
-        dbCard.suppression_carte("hh");
+        //dbCard.suppression_carte("hh");
 
         Cursor c = dbCard.lecture_base();
 
@@ -101,44 +99,7 @@ public class MainActivity extends AppCompatActivity {
             cartes.add(new Carte(i+1, carte[i], urlImage));
         }
     }
-
-    public void edit_name (View v) {
-        int id = v.getId();
-        TextView tv = (TextView) findViewById(id-1);
-        String old_name = String.valueOf(tv.getText());
-        final String[] new_name = new String[1];
-
-        final Dialog dialog_renommer = new Dialog(MainActivity.this);
-        dialog_renommer.setContentView(R.layout.renommer);
-        dialog_renommer.setTitle("Renommer");
-
-        TextView text = (TextView) dialog_renommer.findViewById(R.id.renommer);
-        text.setText("Entrer le nouveau nom de la carte");
-
-        Button validerButton = (Button) dialog_renommer.findViewById(R.id.ok);
-        validerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText text = (EditText) dialog_renommer.findViewById(R.id.newNom);
-                new_name[0] = text.toString();
-                dialog_renommer.dismiss();
-            }
-        });
-
-        Button annulerButton = (Button) dialog_renommer.findViewById(R.id.ok);
-        annulerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog_renommer.dismiss();
-            }
-        });
-        dialog_renommer.show();
-
-        /*Carte_Fidelite_DBOpener cardDBOpener = new Carte_Fidelite_DBOpener(getApplicationContext());
-        final Carte_Fidelite_DB dbCard = new Carte_Fidelite_DB(cardDBOpener);
-        dbCard.setName(old_name, "toto");*/
-    }
-
+	
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;

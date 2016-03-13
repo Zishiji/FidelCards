@@ -39,9 +39,12 @@ public class AjoutActivity extends Activity {
         String nom = String.valueOf(editText_nom.getText());
         String num = String.valueOf(editText_num.getText());
 
-        if (dbCard.contient(nom)) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Vous avez déjà une carte ayant ce nom", Toast.LENGTH_SHORT);
-            toast.show();
+        if (nom.equals("")) {
+            Toast.makeText(getApplicationContext(), "Veuillez renseigner le nom de la carte", Toast.LENGTH_SHORT).show();
+        } else if (num.equals("")) {
+            Toast.makeText(getApplicationContext(), "Veuillez renseigner le numéro de la carte", Toast.LENGTH_SHORT).show();
+        } else if (dbCard.contient(nom)) {
+            Toast.makeText(getApplicationContext(), "Vous avez déjà une carte ayant ce nom", Toast.LENGTH_SHORT).show();
         } else {
             dbCard.ajout_carte(nom, num);
 
@@ -60,7 +63,9 @@ public class AjoutActivity extends Activity {
         String namePhoto = String.valueOf(name.getText());
         File folder = new File("sdcard/Pictures");
 
-        if(!folder.exists())    folder.mkdirs();
+        if(!folder.exists()) {
+            folder.mkdirs();
+        }
 
         File image_file = new File(folder, namePhoto + ".png");
         namePhoto = namePhoto + ".png";
