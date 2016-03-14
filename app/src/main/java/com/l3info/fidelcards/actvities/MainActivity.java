@@ -83,8 +83,6 @@ public class MainActivity extends AppCompatActivity {
         int taille = dbCard.taille_base();
         final String [] carte = new String[taille];
 
-        //dbCard.suppression_carte("hh");
-
         Cursor c = dbCard.lecture_base();
 
         int j = 0;
@@ -95,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
         cartes.clear();
         for (int i = 0; i < carte.length; i++) {
-            String urlImage = "/sdcard/Pictures/"+carte[i]+".png";
+            String urlImage = "/sdcard/FidelCards/img/"+carte[i]+".jpg"; //sauf si bdd en ligne
             cartes.add(new Carte(i+1, carte[i], urlImage));
         }
     }

@@ -46,7 +46,8 @@ public class AjoutActivity extends Activity {
         } else if (dbCard.contient(nom)) {
             Toast.makeText(getApplicationContext(), "Vous avez déjà une carte ayant ce nom", Toast.LENGTH_SHORT).show();
         } else {
-            dbCard.ajout_carte(nom, num);
+            String urlImg = "/sdcard/Pictures/" + nom + ".png";
+            dbCard.ajout_carte(nom, num, urlImg);
 
             Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             File file = getFile();

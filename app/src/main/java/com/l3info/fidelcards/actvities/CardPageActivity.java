@@ -70,17 +70,16 @@ public class CardPageActivity extends AppCompatActivity {
 
         if(c!=null) {
             c.moveToNext();
-            String num = c.getString(c.getColumnIndex(FeedEntry.COLUMN_CARD_NUM));
-
-            tv.setText("Votre carte est " + enseigne + "\nVotre numéro de client associé est " + num);
-
             imgStr = c.getString(c.getColumnIndex(FeedEntry.COLUMN_CARD_LOGO));
             img = (ImageView) findViewById(R.id.imgCard2);
             img.setImageBitmap(this.decodeFileFromPath(imgStr));
         }
-        else {
-            tv.setText("Cette carte n'existe pas");
-        }
+
+        c = dbCard2.getLine(enseigne);
+        c.moveToNext();
+        String num = c.getString(c.getColumnIndex(FeedEntry.COLUMN_CARD_NUM));
+        tv.setText("Votre carte est " + enseigne + "\nVotre numéro de client associé est " + num);
+
     }
 
     private Uri getImageUri(String path) {

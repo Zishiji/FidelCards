@@ -16,13 +16,13 @@ public class CardDB {
         db = cardDBOpener.getWritableDatabase();
     }
 
-    public long ajout_carte(String nom, String numero) {
+    public long ajout_carte(String nom, String numero, String path) {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
         values.put(FeedEntry.COLUMN_CARD_NAME, nom);
         values.put(FeedEntry.COLUMN_CARD_NUM, numero);
-        values.put(FeedEntry.COLUMN_CARD_LOGO, "/sdcard/Download/background.jpeg");
+        values.put(FeedEntry.COLUMN_CARD_LOGO, path);
         values.put(FeedEntry.COLUMN_CARD_SHOP, "Micromania");
 
         return db.insert(FeedEntry.TABLE_NAME, null, values);
